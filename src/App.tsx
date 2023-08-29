@@ -8,7 +8,7 @@ function App() {
     <div className={styles.app_wrapper}>
       <Header/>
       <main className={'flex-grow'}>
-        Content
+          Content
       </main>
       <Footer/>
     </div>

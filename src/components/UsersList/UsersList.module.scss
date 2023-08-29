@@ -1,0 +1,14 @@
+
+
+.users_list {
+  @apply flex gap-4;
+
+  li {
+    @apply cursor-pointer;
+
+    img {
+      @apply rounded-full hover:border-2 hover:border-orange-600;
+      height:60px;
+    }
+  }
+}

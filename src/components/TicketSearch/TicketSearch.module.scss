@@ -1,0 +1,18 @@
+
+
+.search_form_container {
+  @apply flex items-center justify-center;
+  height: 50px;
+
+  .search_form_content {
+    @apply flex gap-1 cursor-pointer;
+
+    .search_form_input {
+      @apply p-2 rounded-md first-letter:uppercase text-neutral-500 hover:bg-neutral-200;
+    }
+
+    .search_form_button {
+      @apply p-2 rounded-md bg-violet-500 first-letter:uppercase text-neutral-100 hover:bg-orange-500;
+    }
+  }
+}
