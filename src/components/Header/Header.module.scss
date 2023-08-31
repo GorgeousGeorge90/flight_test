@@ -2,17 +2,17 @@
 
 
 .header_container {
-  @apply flex items-center justify-center bg-blue-600 text-zinc-100;
-  height: 200px;
+  @apply flex items-center justify-center bg-blue-600 text-zinc-100 sticky z-10 top-0 relative;
+  height: 160px;
 
   .header_content {
     @apply p-14 w-full;
 
     .header_logo {
-      @apply flex items-center gap-10;
+      @apply flex items-center gap-16;
 
       .header_info {
-        @apply font-serif flex-grow;
+        @apply font-serif;
 
         .header_info_title {
           @apply text-2xl;
@@ -37,6 +37,10 @@
         .header_user_list {
           @apply flex flex-row-reverse gap-4;
         }
+      }
+
+      .header_input {
+        @apply flex items-center justify-start flex-grow;
       }
 
       .header_user_ava {

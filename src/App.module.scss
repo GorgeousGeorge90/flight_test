@@ -1,9 +1,9 @@
 
 .app_wrapper {
-  @apply flex flex-col gap-10;
+  @apply flex flex-col;
   height: 100vh;
 
   .app_main {
-    @apply flex-grow;
+    @apply flex-grow flex px-28 py-5 bg-neutral-100;
   }
 }

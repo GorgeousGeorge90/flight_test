@@ -1,0 +1,9 @@
+
+
+.form_sort {
+  @apply flex flex-col gap-1;
+
+  .form_sort_btn {
+    @apply flex items-center justify-center bg-violet-500 text-neutral-100;
+  }
+}

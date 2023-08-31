@@ -19,6 +19,11 @@ const Header = () => {
                             <h1 className={styles.header_info_title}>Northern Hermes</h1>
                             <p className={styles.header_info_text}>only good offers!</p>
                         </section>
+                        <section className={styles.header_input}>
+                            {
+                                user?.user.name ? <p style={{fontStyle:"italic"}}>Have a nice travels with Northen Hermes, {user.user.name}!</p>:<UserInput/>
+                            }
+                        </section>
                         <section className={styles.header_user_info}>
                             {
                                 user?.user.name ? <>
@@ -39,9 +44,6 @@ const Header = () => {
                             }
                         </section>
                     </section>
-                    {
-                        user?.user.name ? <TicketSearch/>:<UserInput/>
-                    }
                 </div>
             </header>)
 }

@@ -1,0 +1,13 @@
+
+
+.pagination_container {
+  @apply flex items-center justify-center;
+
+  .pagination_list {
+    @apply flex gap-2;
+
+    .pagination_list_item {
+      @apply hover:text-red-600 cursor-pointer;
+    }
+  }
+}

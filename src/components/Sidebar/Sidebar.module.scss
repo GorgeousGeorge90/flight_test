@@ -1,0 +1,30 @@
+
+
+.sidebar_container {
+  @apply flex items-center justify-center sticky;
+
+  .sidebar_content {
+    @apply flex items-start flex-col gap-5 h-full w-full sticky top-10;
+
+    .sidebar_all {
+      @apply first-letter:uppercase font-bold text-neutral-600 cursor-pointer hover:animate-bounce;
+    }
+
+    .sidebar_item {
+      @apply flex flex-col items-start gap-1;
+
+      .sidebar_title, {
+        @apply first-letter:uppercase font-bold text-neutral-600;
+      }
+
+      .sidebar_sort_list {
+        @apply flex flex-col;
+
+        label {
+          @apply cursor-pointer;
+        }
+      }
+
+    }
+  }
+}

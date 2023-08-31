@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import UserWrapper from "./context/user/UserWrapper";
+import UserWrapper from './context/user/UserWrapper';
+import FlightsWrapper from './context/flights/FlightsWrapper';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -11,7 +12,9 @@ const root = ReactDOM.createRoot(
 root.render(
     <React.StrictMode>
         <UserWrapper>
-            <App/>
+            <FlightsWrapper>
+                <App/>
+            </FlightsWrapper>
         </UserWrapper>
     </React.StrictMode>
 );

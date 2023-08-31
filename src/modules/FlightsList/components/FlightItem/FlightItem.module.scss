@@ -1,0 +1,48 @@
+
+
+.ticket_container {
+  @apply flex items-center flex-col;
+
+  .ticket_content {
+    @apply flex flex-col items-center justify-center gap-5;
+
+    .ticket_header {
+      @apply flex items-center bg-blue-400 text-neutral-50 w-full px-5 gap-2;
+      height: 50px;
+
+      .ticket_price {
+        @apply flex flex-col items-end flex-grow;
+      }
+    }
+
+    .ticket_list {
+      @apply flex flex-col gap-2;
+
+
+      .ticket_main {
+        @apply flex flex-col gap-1 p-2;
+
+        .ticket_time {
+          @apply flex gap-10 items-center justify-center font-mono;
+
+          .ticket_rule {
+            @apply text-orange-500;
+          }
+        }
+
+        .ticket_duration {
+          @apply flex flex-col items-center;
+        }
+      }
+    }
+
+    .ticket_footer {
+      @apply flex items-center justify-center w-full bg-orange-400 py-2 text-neutral-100;
+
+      button {
+        @apply uppercase;
+      }
+    }
+  }
+}
+
