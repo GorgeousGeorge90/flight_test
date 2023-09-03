@@ -1,7 +1,6 @@
 
 
 .ticket_container {
-  @apply flex items-center flex-col;
 
   .ticket_content {
     @apply flex flex-col items-center justify-center gap-5;
@@ -26,7 +25,7 @@
           @apply flex gap-10 items-center justify-center font-mono;
 
           .ticket_rule {
-            @apply text-orange-500;
+            @apply text-orange-500 cursor-pointer hover:scale-105 transition-all;
           }
         }
 

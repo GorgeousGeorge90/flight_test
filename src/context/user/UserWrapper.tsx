@@ -1,7 +1,5 @@
-import { createContext, FC, ReactNode, useState } from 'react';
+import {createContext, FC, ReactNode, useContext, useState} from 'react';
 import base_user from './../../assets/img/user.png';
-import gamer from './../../assets/img/gamer.png';
-import girl from './../../assets/img/girl.png';
 
 
 
@@ -9,16 +7,16 @@ type UserProps = {
     children:ReactNode,
 }
 
-type UserType = {
+export type UserType = {
     name:string | null,
     avatar: string,
 }
 
 type UserContextType = {
     user: UserType,
-    loginUser:(name:string) => void,
-    logoutUser:() => void,
-    changeAvatar:(avatar:UserType['avatar']) => void,
+    loginUser?:(name:string) => void,
+    logoutUser?:() => void,
+    changeAvatar?:(avatar:UserType['avatar']) => void,
 }
 
 export const UserContext = createContext<UserContextType | null>(null)
@@ -61,4 +59,5 @@ const UserWrapper:FC<UserProps> = ({children}) => {
         </UserContext.Provider>)
 }
 
+export const useUserContext = () => useContext(UserContext)
 export default UserWrapper

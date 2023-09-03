@@ -17,10 +17,16 @@ export type TicketType = {
     operatingAirline:string,
     travelDuration:number,
     duration?:string,
+    id?:number,
+    index?:number,
 }
 
-
 export type FullTicketType = {
+    duration:string,
+    ticket:TicketType,
+}
+
+export type FullTicketTypeEx = {
     duration:string,
     ticket:TicketType[],
 }
@@ -31,3 +37,11 @@ export type FlightType = {
     carrier:string,
     tickets:FullTicketType[],
 }
+
+export type FlightTypeEx = {
+    id:number,
+    price:number,
+    carrier:string,
+    tickets:FullTicketTypeEx[],
+}
+

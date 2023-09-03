@@ -1,14 +1,13 @@
 import styles from './Header.module.scss';
-import TicketSearch from '../TicketSearch/TicketSearch';
 import logo from './../../assets/img/logo.png';
-import { useContext, useState } from 'react';
-import { UserContext } from '../../context/user/UserWrapper';
-import UserInput from "../UserInput/UserInput";
-import UsersList from "../UsersList/UsersList";
+import { useState } from 'react';
+import { useUserContext } from '../../context/user/UserWrapper';
+import UserInput from '../UserInput/UserInput';
+import UsersList from '../UsersList/UsersList';
 
 
 const Header = () => {
-    const user = useContext(UserContext)
+    const state = useUserContext()
     const [editMode,setEditMode] = useState(false)
 
     return (<header className={styles.header_container}>
@@ -21,21 +20,21 @@ const Header = () => {
                         </section>
                         <section className={styles.header_input}>
                             {
-                                user?.user.name ? <p style={{fontStyle:"italic"}}>Have a nice travels with Northen Hermes, {user.user.name}!</p>:<UserInput/>
+                                state?.user.name ? <p style={{fontStyle:"italic"}}>Have a nice travels with Northen Hermes, {state.user.name}!</p>:<UserInput/>
                             }
                         </section>
                         <section className={styles.header_user_info}>
                             {
-                                user?.user.name ? <>
+                                state?.user.name ? <>
                                     <div className={styles.header_user_about}>
                                         <img className={styles.header_user_ava}
-                                             src={user?.user.avatar}
+                                             src={state?.user.avatar}
                                              alt='ava'
                                              onClick={() => setEditMode(!editMode)}
                                         />
-                                        <p>{user?.user.name}</p>
+                                        <p>{state?.user.name}</p>
                                         <button className={styles.btn}
-                                                onClick={()=> user.logoutUser()}>logout</button>
+                                                onClick={()=> state.logoutUser()}>logout</button>
                                     </div>
                                     {
                                         editMode ? <UsersList onClick={()=>setEditMode(false)}/> : null

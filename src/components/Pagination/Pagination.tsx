@@ -23,6 +23,7 @@ const Pagination:FC<PaginatorProps>= ({totalPages,pagePortion,currentPage,setCur
                 pages.map((page, i) => <li key={i}
                                                    className={styles.pagination_list_item}
                                                    onClick={()=> setCurrent(page)}
+                                                   style={{fontWeight: page === currentPage ? 'bold': undefined}}
                 >{page}
                 </li>)
             }

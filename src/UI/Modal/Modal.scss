@@ -1,0 +1,17 @@
+
+
+.modal {
+  @apply w-full h-full fixed top-0 left-0 flex items-center justify-center
+  opacity-0 transition-all;
+  background-color: rgba(0,0,0,0.4);
+  pointer-events: none;
+
+  .modal_content {
+    @apply p-5 rounded-md bg-white min-w-fit min-h-fit;
+  }
+}
+
+.modal.active {
+  opacity: 1;
+  pointer-events: all;
+}

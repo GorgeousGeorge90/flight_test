@@ -3,6 +3,7 @@ import {useContext, useState} from 'react';
 import Pagination from '../components/Pagination/Pagination';
 import { FlightContext } from '../context/flights/FlightsWrapper';
 import styles from './FligthsPage.module.scss';
+import Modal from "../UI/Modal/Modal";
 
 
 const FlightsPage = () => {

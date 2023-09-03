@@ -7,7 +7,7 @@
     @apply flex items-start flex-col gap-5 h-full w-full sticky top-10;
 
     .sidebar_all {
-      @apply first-letter:uppercase font-bold text-neutral-600 cursor-pointer hover:animate-bounce;
+      @apply first-letter:uppercase font-bold text-neutral-600 cursor-pointer hover:scale-125 transition-all;
     }
 
     .sidebar_item {
@@ -20,8 +20,8 @@
       .sidebar_sort_list {
         @apply flex flex-col;
 
-        label {
-          @apply cursor-pointer;
+        .sidebar_company {
+          @apply cursor-pointer font-semibold text-neutral-500 hover:scale-105 hover:text-violet-500 transition-all;
         }
       }
 

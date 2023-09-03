@@ -3,7 +3,6 @@ import styles from './App.module.scss';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Sidebar from './components/Sidebar/Sidebar';
-import FlightsList from './modules/FlightsList/FlightsList';
 import { UserContext } from './context/user/UserWrapper';
 import FlightsPage from './pages/FlightsPage';
 

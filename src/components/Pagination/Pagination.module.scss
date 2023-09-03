@@ -7,7 +7,7 @@
     @apply flex gap-2;
 
     .pagination_list_item {
-      @apply hover:text-red-600 cursor-pointer;
+      @apply hover:scale-125 cursor-pointer p-1;
     }
   }
 }

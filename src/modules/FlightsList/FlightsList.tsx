@@ -1,8 +1,10 @@
-import { FC, useContext, useState } from 'react';
-import { FlightContext } from '../../context/flights/FlightsWrapper';
+import { FC, useState } from 'react';
+import { useFlightsContext } from '../../context/flights/FlightsWrapper';
 import FlightItem from './components/FlightItem/FlightItem';
 import styles from './FlightsList.module.scss';
-import Pagination from "../../components/Pagination/Pagination";
+import Modal from '../../UI/Modal/Modal';
+import FlightItemEx from './components/FlightItemEx/FlightItemEx';
+
 
 
 type FlightsListType = {
@@ -10,19 +12,45 @@ type FlightsListType = {
     pagePortion:number,
 }
 
+export type CurrentType = {
+    id:number,
+    index:number,
+}
+
 const FlightsList:FC<FlightsListType> = ({currentPage, pagePortion}) => {
-    const flights = useContext(FlightContext)
+    const [ active,setActive ] = useState<boolean>(false)
+    const [ current,setCurrentItem ] = useState<CurrentType | null>(null)
+    const state = useFlightsContext()
     let lastIndex = currentPage * pagePortion
     let firstIndex = lastIndex - pagePortion
+
+
+    const setCurrent = ({id,index}:CurrentType) => {
+        setCurrentItem(prev => {
+            return {
+                ...prev,
+                id,
+                index,
+            }
+        })
+    }
 
     return (<section className={styles.tickets_list_container}>
         <ul className={styles.tickets_list_content}>
             {
-                flights ? flights.flights.slice(firstIndex,lastIndex).map(flight => <li key={flight.id}>
-                    <FlightItem {...flight}/>
+                state ? state.flights.slice(firstIndex,lastIndex).map(flight => <li key={flight.id}>
+                    <FlightItem flight={flight}
+                                setActive={setActive}
+                                setCurrent={setCurrent}
+                    />
                 </li>):null
             }
         </ul>
+        <Modal active={active} setActive={setActive}>
+            {
+                current ? <FlightItemEx {...current}/>:null
+            }
+        </Modal>
     </section>)
 }
 

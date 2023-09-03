@@ -1,8 +1,8 @@
 import gamer from './../../assets/img/gamer.png';
 import girl from './../../assets/img/girl.png';
 import styles from './UsersList.module.scss';
-import { FC, useContext } from 'react';
-import { UserContext } from '../../context/user/UserWrapper';
+import { FC } from 'react';
+import { useUserContext } from '../../context/user/UserWrapper';
 
 
 type ListProps = {
@@ -20,7 +20,7 @@ const avatars:AvaType[] = [
 ]
 
 const UsersList:FC<ListProps> = ({onClick}) => {
-    const user = useContext(UserContext)
+    const state = useUserContext()
 
     return (<ul className={styles.users_list}>
         {
@@ -28,7 +28,7 @@ const UsersList:FC<ListProps> = ({onClick}) => {
                 <img src={ava.avatar}
                      alt='ava'
                      onClick={()=>{
-                         user?.changeAvatar(ava.avatar)
+                         state?.changeAvatar(ava.avatar)
                          onClick()
                      }}
                 />

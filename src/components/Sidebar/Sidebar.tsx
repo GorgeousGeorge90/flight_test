@@ -1,20 +1,20 @@
 import styles from './Sidebar.module.scss';
 import { useContext } from 'react';
 import { FlightContext } from '../../context/flights/FlightsWrapper';
-import PriceLimit from "./PriceLimit/PriceLimit";
+import PriceLimit from './PriceLimit/PriceLimit';
 
 
 const Sidebar = () => {
-    const flights = useContext(FlightContext)
+    const state = useContext(FlightContext)
 
-    const fromLow = () => flights ? flights.priceFromLow():console.log(null)
-    const fromHigh = () => flights ? flights.priceFromHigh():console.log(null)
-    const sortByPrice = (min:string, max:string) => flights ? flights.sortByPrice(min,max):console.log(null)
+    const fromLow = () => state?.priceFromLow()
+    const fromHigh = () => state?.priceFromHigh()
+    const sortByPrice = (min:string, max:string) => state?.sortByPrice(min,max)
 
     return (<section className={styles.sidebar_container}>
         <div className={styles.sidebar_content}>
             <h3 className={styles.sidebar_all}
-                onClick={() => flights ? flights.allFlights():
+                onClick={() => state ? state.allFlights():
                     console.log(null)}
             >все билеты</h3>
             <section className={styles.sidebar_item}>
@@ -33,8 +33,8 @@ const Sidebar = () => {
             <section className={styles.sidebar_item}>
                 <h3 className={styles.sidebar_title}>фильтровать</h3>
                 <ul className={styles.sidebar_sort_list}>
-                    <li><input type='checkbox'/><span> - с пересадкой</span></li>
-                    <li><input type='checkbox'/><span> - без пересадок</span></li>
+                    <li onClick={() => state?.sortByStops(true)}><input type='checkbox'/><span> - с пересадкой</span></li>
+                    <li onClick={() => state?.sortByStops(false)}><input type='checkbox'/><span> - без пересадок</span></li>
                 </ul>
             </section>
             <section className={styles.sidebar_item}>
@@ -45,12 +45,10 @@ const Sidebar = () => {
                 <h3 className={styles.sidebar_title}>авиакомпании</h3>
                 <ul className={styles.sidebar_sort_list}>
                     {
-                        flights ? flights.airlines.map((item,i) => <li key={i}>
-                            <input type='radio'
-                                   name={'air'}
-                                   onClick={() => flights ? flights.sortByCarrier(item):
-                                       console.log(null)}
-                            /><span> - {item}</span>
+                        state ? state.airlines.map((item,i) => <li key={i}
+                                                                                  className={styles.sidebar_company}
+                                                                                  onClick={() => state?.sortByCarrier(item)}>
+                            {item}
                         </li>):null
                     }
                 </ul>

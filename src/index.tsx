@@ -6,15 +6,16 @@ import reportWebVitals from './reportWebVitals';
 import UserWrapper from './context/user/UserWrapper';
 import FlightsWrapper from './context/flights/FlightsWrapper';
 
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
     <React.StrictMode>
         <UserWrapper>
-            <FlightsWrapper>
-                <App/>
-            </FlightsWrapper>
+                <FlightsWrapper>
+                    <App/>
+                </FlightsWrapper>
         </UserWrapper>
     </React.StrictMode>
 );

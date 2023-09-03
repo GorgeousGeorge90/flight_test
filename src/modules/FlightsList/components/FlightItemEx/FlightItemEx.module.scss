@@ -1,0 +1,19 @@
+
+
+
+.ticket_container {
+  @apply flex items-center justify-center;
+
+  .ticket_item {
+    @apply flex gap-1 p-2;
+  }
+
+  .ticket_time {
+    @apply flex gap-10 items-center justify-center font-mono;
+
+    .ticket_duration {
+      @apply flex items-center flex-col;
+    }
+  }
+}
+
