@@ -55,4 +55,4 @@ This part includes:
 ### Contacts
 
 For feedback:`Gambit47@yandex.ru`<br>
-Deployed:`https://new-todo-ten.vercel.app/`
+Deployed:`https://flight-test-one.vercel.app/`
