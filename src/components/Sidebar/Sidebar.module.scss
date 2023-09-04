@@ -1,10 +1,10 @@
 
 
 .sidebar_container {
-  @apply flex items-center justify-center sticky;
+  @apply flex items-center justify-center;
 
   .sidebar_content {
-    @apply flex items-start flex-col gap-5 h-full w-full sticky top-10;
+    @apply flex items-start flex-col gap-5 h-full w-full;
 
     .sidebar_all {
       @apply first-letter:uppercase font-bold text-neutral-600 cursor-pointer hover:scale-125 transition-all;
@@ -20,8 +20,42 @@
       .sidebar_sort_list {
         @apply flex flex-col;
 
+        .sidebar_list_item {
+
+          label {
+            @apply cursor-pointer;
+          }
+        }
+
+
         .sidebar_company {
           @apply cursor-pointer font-semibold text-neutral-500 hover:scale-105 hover:text-violet-500 transition-all;
+        }
+      }
+
+    }
+  }
+
+  .sidebar_content_disabled {
+    @apply flex items-start flex-col gap-5 h-full w-full sticky top-10;
+    pointer-events:none;
+
+    .sidebar_all {
+      @apply first-letter:uppercase font-bold text-neutral-400;
+    }
+
+    .sidebar_item {
+      @apply flex flex-col items-start gap-1;
+
+      .sidebar_title, {
+        @apply first-letter:uppercase font-bold text-neutral-400;
+      }
+
+      .sidebar_sort_list {
+        @apply flex flex-col;
+
+        .sidebar_company {
+          @apply cursor-pointer font-semibold text-neutral-300;
         }
       }
 

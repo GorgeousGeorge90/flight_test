@@ -4,15 +4,19 @@
 .ticket_container {
   @apply flex items-center justify-center;
 
-  .ticket_item {
-    @apply flex gap-1 p-2;
-  }
+  .ticket_list {
+    @apply flex flex-col gap-3;
 
-  .ticket_time {
-    @apply flex gap-10 items-center justify-center font-mono;
+    .ticket_item_ex {
+      @apply flex flex-col gap-2 p-2;
+    }
 
-    .ticket_duration {
-      @apply flex items-center flex-col;
+    .ticket_time_travel {
+      @apply flex font-mono justify-evenly;
+
+      .ticket_duration {
+        @apply flex items-center flex-col;
+      }
     }
   }
 }

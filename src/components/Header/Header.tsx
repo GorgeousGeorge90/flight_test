@@ -20,7 +20,7 @@ const Header = () => {
                         </section>
                         <section className={styles.header_input}>
                             {
-                                state?.user.name ? <p style={{fontStyle:"italic"}}>Have a nice travels with Northen Hermes, {state.user.name}!</p>:<UserInput/>
+                                state?.user.name ? <p style={{fontStyle:"italic"}}>Have a nice travel with Northern Hermes, {state.user.name}!</p>:<UserInput/>
                             }
                         </section>
                         <section className={styles.header_user_info}>
@@ -34,7 +34,7 @@ const Header = () => {
                                         />
                                         <p>{state?.user.name}</p>
                                         <button className={styles.btn}
-                                                onClick={()=> state.logoutUser()}>logout</button>
+                                                onClick={()=> state?.logoutUser()}>logout</button>
                                     </div>
                                     {
                                         editMode ? <UsersList onClick={()=>setEditMode(false)}/> : null

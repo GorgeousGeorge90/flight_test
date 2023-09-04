@@ -2,7 +2,7 @@
 
 
 .header_container {
-  @apply flex items-center justify-center bg-blue-600 text-zinc-100 sticky z-10 top-0 relative;
+  @apply flex items-center justify-center bg-blue-600 text-zinc-100 sticky z-10 top-0;
   height: 160px;
 
   .header_content {

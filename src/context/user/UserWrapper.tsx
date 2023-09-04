@@ -14,9 +14,9 @@ export type UserType = {
 
 type UserContextType = {
     user: UserType,
-    loginUser?:(name:string) => void,
-    logoutUser?:() => void,
-    changeAvatar?:(avatar:UserType['avatar']) => void,
+    loginUser:(name:string) => void,
+    logoutUser:() => void,
+    changeAvatar:(avatar:UserType['avatar']) => void,
 }
 
 export const UserContext = createContext<UserContextType | null>(null)

@@ -1,6 +1,6 @@
 import { useFlightsContext } from '../../../../context/flights/FlightsWrapper';
 import { CurrentType } from '../../FlightsList';
-import styles from '../FlightItem/FlightItem.module.scss';
+import styles from './FlightItemEx.module.scss';
 
 
 
@@ -11,10 +11,10 @@ const FlightItemEx = ({id,index}:CurrentType) => {
 
     return (<section className={styles.ticket_container}>
         {
-            current_ticket ? <ul>
+            current_ticket ? <ul className={styles.ticket_list}>
                 {
                     current_ticket.map((item, i) => <li key={i}
-                                                    className={styles.ticket_item}>
+                                                    className={styles.ticket_item_ex}>
                         <p>
                             {item.departureCity},&nbsp;
                             <span>{item.departureAirport.caption}</span>&nbsp;
@@ -25,16 +25,13 @@ const FlightItemEx = ({id,index}:CurrentType) => {
                             <span style={{color: 'blue'}}>( {item.arrivalAirport.uid} )</span>
                         </p>
                         <hr/>
-                        <span className={styles.ticket_time}>
-                                <b>{item.departureDate}</b>&rarr;
-                            <span className={styles.ticket_duration}>
-                                <p>&#9201; {item.duration}</p>
+                        <p className={styles.ticket_time_travel}>
+                                <b>{item.departureDate}</b>
+                                <span>&rarr;</span>
                                 <b>{item.arrivalDate}</b>
-                            </span>
-                        </span>
+                        </p>
                     </li>)
                 }
-                <hr/>
             </ul>:null
         }
     </section>)

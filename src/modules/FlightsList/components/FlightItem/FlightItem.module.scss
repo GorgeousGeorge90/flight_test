@@ -3,7 +3,7 @@
 .ticket_container {
 
   .ticket_content {
-    @apply flex flex-col items-center justify-center gap-5;
+    @apply flex flex-col items-center justify-center;
 
     .ticket_header {
       @apply flex items-center bg-blue-400 text-neutral-50 w-full px-5 gap-2;
@@ -22,7 +22,7 @@
         @apply flex flex-col gap-1 p-2;
 
         .ticket_time {
-          @apply flex gap-10 items-center justify-center font-mono;
+          @apply flex items-center justify-between font-mono;
 
           .ticket_rule {
             @apply text-orange-500 cursor-pointer hover:scale-105 transition-all;

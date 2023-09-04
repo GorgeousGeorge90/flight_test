@@ -1,8 +1,8 @@
 
 
 .footer_container {
-  @apply flex items-center justify-center bg-blue-600 text-zinc-100 static;
-  height: 80px;
+  @apply flex items-center justify-center bg-blue-600 text-zinc-100;
+  height: 60px;
 
   .footer_content {
     @apply flex gap-2;

@@ -2,7 +2,7 @@
 
 .tickets_list_container {
   @apply flex flex-grow justify-center animate-show_it;
-  width: 800px;
+  max-width: 500px;
 
   .tickets_list_content {
     @apply flex flex-col gap-5;

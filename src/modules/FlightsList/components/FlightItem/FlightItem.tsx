@@ -21,7 +21,7 @@ const FlightItem = ({flight,setActive,setCurrent}:FlightItemProps) => {
                 <p style={{fontWeight: 'bold', fontStyle: 'italic'}}>{flight.carrier}</p>
                 <p className={styles.ticket_price}>
                     <span style={{fontSize: 'larger'}}>{flight.price} &#8381;</span>
-                    <span style={{fontSize: 'x-small'}}>Cтоимость для одного взрослого пассажира</span>
+                    <span style={{fontSize: 'x-small'}}>Полная стоимость</span>
                 </p>
             </header>
             <ul className={styles.ticket_list}>
