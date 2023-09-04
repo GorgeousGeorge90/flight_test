@@ -1,0 +1,438 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` render FlightItem component 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <section
+        class="ticket_container"
+      >
+        <div
+          class="ticket_content"
+        >
+          <header
+            class="ticket_header"
+          >
+            <span>
+              <img
+                alt="icon"
+                src="icon.png"
+              />
+            </span>
+            <p
+              style="font-weight: bold; font-style: italic;"
+            >
+              Air France
+            </p>
+            <p
+              class="ticket_price"
+            >
+              <span
+                style="font-size: larger;"
+              >
+                105368
+                 ₽
+              </span>
+              <span
+                style="font-size: x-small;"
+              >
+                Cтоимость для одного взрослого пассажира
+              </span>
+            </p>
+          </header>
+          <ul
+            class="ticket_list"
+          >
+            <li>
+              <main
+                class="ticket_main"
+              >
+                <p>
+                  Москва
+                  , 
+                  <span>
+                    ШЕРЕМЕТЬЕВО
+                  </span>
+                   
+                  <span
+                    style="color: blue;"
+                  >
+                    ( 
+                    SVO
+                     )
+                  </span>
+                   → 
+                  ЛОНДОН
+                  , 
+                  <span>
+                    Лондон, Хитроу
+                  </span>
+                   
+                  <span
+                    style="color: blue;"
+                  >
+                    ( 
+                    LHR
+                     )
+                  </span>
+                </p>
+                <hr />
+                <span
+                  class="ticket_time"
+                >
+                  <b>
+                    6:10 18.7
+                  </b>
+                  →
+                  <span
+                    class="ticket_duration"
+                  >
+                    <p>
+                      ⏱ 
+                      12 ч 15 мин
+                    </p>
+                    <p
+                      class="ticket_rule"
+                    >
+                      1 пересадка
+                    </p>
+                  </span>
+                  →
+                  <b>
+                    16:25 18.7
+                  </b>
+                </span>
+                <hr />
+                <p>
+                  Рейс выполняет: 
+                  Air France
+                </p>
+                <hr
+                  style="border-width: 2px; border-color: darkgray;"
+                />
+              </main>
+            </li>
+            <li>
+              <main
+                class="ticket_main"
+              >
+                <p>
+                  ЛОНДОН
+                  , 
+                  <span>
+                    Лондон, Хитроу
+                  </span>
+                   
+                  <span
+                    style="color: blue;"
+                  >
+                    ( 
+                    LHR
+                     )
+                  </span>
+                   → 
+                  Москва
+                  , 
+                  <span>
+                    ШЕРЕМЕТЬЕВО
+                  </span>
+                   
+                  <span
+                    style="color: blue;"
+                  >
+                    ( 
+                    SVO
+                     )
+                  </span>
+                </p>
+                <hr />
+                <span
+                  class="ticket_time"
+                >
+                  <b>
+                    17:35 19.7
+                  </b>
+                  →
+                  <span
+                    class="ticket_duration"
+                  >
+                    <p>
+                      ⏱ 
+                      23 ч 20 мин
+                    </p>
+                    <p
+                      class="ticket_rule"
+                    >
+                      1 пересадка
+                    </p>
+                  </span>
+                  →
+                  <b>
+                    18:55 20.7
+                  </b>
+                </span>
+                <hr />
+                <p>
+                  Рейс выполняет: 
+                  Аэрофлот - российские авиалинии
+                </p>
+                <hr
+                  style="border-width: 2px; border-color: darkgray;"
+                />
+              </main>
+            </li>
+          </ul>
+          <footer
+            class="ticket_footer"
+          >
+            <button>
+              выбрать
+            </button>
+          </footer>
+        </div>
+      </section>
+    </div>
+  </body>,
+  "container": <div>
+    <section
+      class="ticket_container"
+    >
+      <div
+        class="ticket_content"
+      >
+        <header
+          class="ticket_header"
+        >
+          <span>
+            <img
+              alt="icon"
+              src="icon.png"
+            />
+          </span>
+          <p
+            style="font-weight: bold; font-style: italic;"
+          >
+            Air France
+          </p>
+          <p
+            class="ticket_price"
+          >
+            <span
+              style="font-size: larger;"
+            >
+              105368
+               ₽
+            </span>
+            <span
+              style="font-size: x-small;"
+            >
+              Cтоимость для одного взрослого пассажира
+            </span>
+          </p>
+        </header>
+        <ul
+          class="ticket_list"
+        >
+          <li>
+            <main
+              class="ticket_main"
+            >
+              <p>
+                Москва
+                , 
+                <span>
+                  ШЕРЕМЕТЬЕВО
+                </span>
+                 
+                <span
+                  style="color: blue;"
+                >
+                  ( 
+                  SVO
+                   )
+                </span>
+                 → 
+                ЛОНДОН
+                , 
+                <span>
+                  Лондон, Хитроу
+                </span>
+                 
+                <span
+                  style="color: blue;"
+                >
+                  ( 
+                  LHR
+                   )
+                </span>
+              </p>
+              <hr />
+              <span
+                class="ticket_time"
+              >
+                <b>
+                  6:10 18.7
+                </b>
+                →
+                <span
+                  class="ticket_duration"
+                >
+                  <p>
+                    ⏱ 
+                    12 ч 15 мин
+                  </p>
+                  <p
+                    class="ticket_rule"
+                  >
+                    1 пересадка
+                  </p>
+                </span>
+                →
+                <b>
+                  16:25 18.7
+                </b>
+              </span>
+              <hr />
+              <p>
+                Рейс выполняет: 
+                Air France
+              </p>
+              <hr
+                style="border-width: 2px; border-color: darkgray;"
+              />
+            </main>
+          </li>
+          <li>
+            <main
+              class="ticket_main"
+            >
+              <p>
+                ЛОНДОН
+                , 
+                <span>
+                  Лондон, Хитроу
+                </span>
+                 
+                <span
+                  style="color: blue;"
+                >
+                  ( 
+                  LHR
+                   )
+                </span>
+                 → 
+                Москва
+                , 
+                <span>
+                  ШЕРЕМЕТЬЕВО
+                </span>
+                 
+                <span
+                  style="color: blue;"
+                >
+                  ( 
+                  SVO
+                   )
+                </span>
+              </p>
+              <hr />
+              <span
+                class="ticket_time"
+              >
+                <b>
+                  17:35 19.7
+                </b>
+                →
+                <span
+                  class="ticket_duration"
+                >
+                  <p>
+                    ⏱ 
+                    23 ч 20 мин
+                  </p>
+                  <p
+                    class="ticket_rule"
+                  >
+                    1 пересадка
+                  </p>
+                </span>
+                →
+                <b>
+                  18:55 20.7
+                </b>
+              </span>
+              <hr />
+              <p>
+                Рейс выполняет: 
+                Аэрофлот - российские авиалинии
+              </p>
+              <hr
+                style="border-width: 2px; border-color: darkgray;"
+              />
+            </main>
+          </li>
+        </ul>
+        <footer
+          class="ticket_footer"
+        >
+          <button>
+            выбрать
+          </button>
+        </footer>
+      </div>
+    </section>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
